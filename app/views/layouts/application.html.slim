@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= content_for?(:title) ? yield(:title) : 'LOL Team Finder'
+
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'css_imports'
+    = javascript_include_tag :application, 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = yield :head
+
+  body ng:controller='app' ng-cloak=''
+    .body
+      = yield
