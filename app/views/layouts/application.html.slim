@@ -11,4 +11,17 @@ html
 
   body ng:controller='app' ng-cloak=''
     .body
+    header ng:controller='header'
+      .title LOL Team Finder
+      .right
+        .links ng:show='user'
+          .link
+            a href='/auth/signout' Log out
+        .links ng:hide='user'
+          .link data-toggle="modal" data-target="#signup-modal"
+            .text Sign up
+          .link data-toggle="modal" data-target="#login-modal"
+            .text Log in
       = yield
+      = render 'common/signup_modal'
+      = render 'common/login_modal'

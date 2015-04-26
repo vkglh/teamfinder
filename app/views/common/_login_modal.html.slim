@@ -1,0 +1,18 @@
+#login-modal.modal.fade aria-hidden="true" aria-labelledby="login-modal" role="dialog" tabindex="-1" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button" 
+          span aria-hidden="true"  &times;
+        h4#myModalLabel.modal-title Log in
+      .modal-body
+        form
+          .form-group
+            label for="email"  Email address
+            input#email.form-control placeholder=("Enter email") type="email" ng:model='form.email'
+          .form-group
+            label for="password"  Password
+            input#password.form-control placeholder="Password" type="password" ng:model='form.password'
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button"  Close
+        button.btn.btn-primary type="button" ng:click='login()' Log in

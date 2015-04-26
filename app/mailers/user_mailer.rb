@@ -1,4 +1,4 @@
-class UserMailer < MandrillMailer::TemplateMailer
+class UserMailer < ActionMailer::Base
 
   default from: 'support@lolteam.io'
   default from_name: 'LOL Team Finder'

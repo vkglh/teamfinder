@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require angular
 //= require angular-cookies.min
@@ -21,7 +22,6 @@
 //= require select2.min
 //= require select2
 //= require underscore-min
-//= require ngDialog.min
 //= require app
 //= require_tree .
 

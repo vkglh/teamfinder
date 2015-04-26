@@ -6,9 +6,10 @@ gem 'rails'
 gem 'puma'
 
 group :assets do
-  #gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', platforms: :ruby
   gem 'coffee-rails'
   gem 'sass-rails'
+  gem 'less-rails'
   gem 'uglifier'
   gem 'angularjs-rails'
   gem 'jquery-rails'
@@ -49,7 +50,6 @@ gem 'faraday', '~> 0.8.9'
 gem 'twilio-ruby'
 gem 'simplecov', :require => false
 gem 'sorcery'
-gem 'appsignal', '~> 0.11.8.beta.3'
 gem 'pg_search'
 gem 'httparty'
 gem 'friendly_id'
@@ -70,3 +70,4 @@ gem 'sucker_punch'
 gem 'simple_enum'
 gem 'timezone'
 gem 'active_model_serializers', '0.8.3'
+gem 'twitter-bootstrap-rails'

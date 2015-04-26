@@ -80,6 +80,12 @@
 
 .ngdialog-content {
   background: white;
+  position: absolute;
+  width: 400px;
+  margin-left: 50%;
+  left: -200px;
+  margin-top: 100px;
+  padding: 25px;
   -webkit-backface-visibility: hidden;
   -webkit-animation: ngdialog-fadein 0.5s;
   animation: ngdialog-fadein 0.5s;
