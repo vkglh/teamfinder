@@ -4,6 +4,10 @@ class AuthController < ApplicationController
     user          = User.new
     user.email    = params[:form][:email]
     user.password = params[:form][:password]
+    user.handle   = params[:form][:handle]
+    user.rank_cd  = params[:form][:rank][:id]
+    user.role_cd  = params[:form][:role][:id]
+    user.timezone = params[:form][:timezone][:text]
     if user.save
       user.update_attribute :activation_state, 'active'
       auto_login user

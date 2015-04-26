@@ -18,6 +18,31 @@ HeaderCtrl = ['$scope', '$http', '$timeout', '$window', '$q', ($scope, $http, $t
       if rsp.success
         $window.location = '/'
 
+  $scope.rankHash = ->
+    {
+      minimumResultsForSearch: -1
+      data: [{id: 0, text: 'Bronze'},{id: 1, text: 'Silver'},{id: 2, text: 'Gold'},{id: 3, text: 'Platinum'},{id: 4, text: 'Diamond'},{id: 5, text: 'Challenger'}]
+      initSelection: (el, cb) -> {id: 0, text: 'Bronze'}
+    }
+
+  $scope.roleHash = ->
+    {
+      minimumResultsForSearch: -1
+      data: [{id: 0, text: 'ADC'},{id: 1, text: 'Support'},{id: 2, text: 'Mid'},{id: 3, text: 'Top'},{id: 4, text: 'Jungle'}]
+      initSelection: (el, cb) -> {id: 0, text: 'ADC'}
+    }
+
+  $scope.timezoneHash = ->
+    {
+      initSelection: (el, cb) ->
+      data: []
+      ajax:
+        url: $window.location.href + '/timezones'
+        quietMillis: 400
+        data: (term) -> { term: term }
+        results: (data) -> { results: _(data.zones).map (zone, i) -> { id: i, text: zone } }
+    }
+
 ]
 
 app = angular.module('lolteam', ['ngCookies',

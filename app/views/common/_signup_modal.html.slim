@@ -8,11 +8,23 @@
       .modal-body
         form
           .form-group
-            label for="email"  Email address
+            label for="email" Email address
             input#email.form-control placeholder=("Enter email") type="email" ng:model='form.email'
           .form-group
-            label for="password"  Password
+            label for="password" Password
             input#password.form-control placeholder="Password" type="password" ng:model='form.password'
+          .form-group
+            label for="handle" LOL Username
+            input#handle.form-control placeholder="Username" type="text" ng:model='form.handle'
+          .form-group.select2
+            label for="rank"  Rank
+            input#rank type='hidden' ui-select2='rankHash()' ng:model='form.rank'
+          .form-group.select2
+            label for="role"  Role
+            input#role type='hidden' ui-select2='roleHash()' ng:model='form.role'
+          .form-group.select2
+            label for="timezone"  Timezone
+            input#timezone type='hidden' ui-select2='timezoneHash()' ng:model='form.timezone'
       .modal-footer
         button.btn.btn-default data-dismiss="modal" type="button"  Close
         button.btn.btn-primary type="button" ng:click='signup()' Sign up
